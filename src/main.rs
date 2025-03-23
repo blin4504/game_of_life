@@ -89,16 +89,16 @@ fn count_neighbors(board: &mut Board, x: usize, y: usize) -> i32 {
 }
 
 fn main() {
-    let mut board = Board::new(10, 10);
+    let mut board = Board::new(50, 50);
     board.spawn(1, 1);
     board.spawn(2, 2);
     board.spawn(3, 2);
     board.spawn(3, 1);
     board.spawn(3, 0);
 
-    // loop {
+    loop {
         board.display();
         board.update();
-        // thread::sleep(Duration::from_millis(1000));
-    // }    
+        thread::sleep(Duration::from_millis(1000));
+    }    
 }
